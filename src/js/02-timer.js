@@ -10,7 +10,7 @@ const minutesValue = document.querySelector('[data-minutes]');
 const secondsValue = document.querySelector('[data-seconds]');
 
 let countdownIntervalId;
-
+let targetDate;
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -23,6 +23,9 @@ const options = {
       startButton.disabled = true;
     } else {
       startButton.disabled = false;
+      targetDate = selectedDate;
+      updateTimerDisplay(0, 0, 0, 0);
+      clearInterval(countdownIntervalId);
     }
   },
 };
@@ -30,12 +33,11 @@ const options = {
 flatpickr(datetimePicker, options);
 
 startButton.addEventListener('click', () => {
-  const selectedDate = flatpickr.parseDate(datetimePicker.value);
   startButton.disabled = true;
-  startCountdown(selectedDate);
+  startCountdown();
 });
 
-function startCountdown(targetDate) {
+function startCountdown() {
   countdownIntervalId = setInterval(() => {
     const currentDate = new Date();
     const timeDifference = targetDate - currentDate;

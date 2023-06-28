@@ -18,13 +18,15 @@ function changeBackgroundColor() {
 
 // Обробник кліку на кнопку "Start"
 function handleStartClick() {
-  startBtn.disabled = true; // Деактивуємо кнопку "Start"
+  startBtn.disabled = true;
+  startBtn.style.backgroundColor = 'gray'; // Деактивуємо кнопку "Start"
   intervalId = setInterval(changeBackgroundColor, 1000); // Запускаємо інтервал для зміни кольору
 }
 
 // Обробник кліку на кнопку "Stop"
 function handleStopClick() {
-  startBtn.disabled = false; // Активуємо кнопку "Start"
+  startBtn.disabled = false;
+  startBtn.style.backgroundColor = ''; // Активуємо кнопку "Start"
   clearInterval(intervalId); // Зупиняємо інтервал для зміни кольору
 }
 
