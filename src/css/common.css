@@ -3,12 +3,12 @@
 }
 
 body {
-  background-color: honeydew;
+  background-color: sandybrown;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+
   color: #212121;
   line-height: 1.5;
 }
@@ -17,11 +17,33 @@ img {
   display: block;
   max-width: 100%;
 }
+li {
+  font-size: 20px;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #553c9a 45%, #ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fdfdfe;
+  text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+    0px 0px 20px #b393d3;
+}
 
 .main-scren {
-  background-color: antiquewhite;
+  margin-top: 150px;
   display: flex;
   justify-content: space-around;
+}
+a:hover,
+a:focus {
+  color: #212121;
+  transform: scale(1.2);
 }
 
 .return {
@@ -101,6 +123,7 @@ img {
 }
 
 .title {
+  margin-top: 100px;
   text-align: center;
   font-size: 50px;
   font-weight: 600;
@@ -140,5 +163,50 @@ img {
 
 .btn-timer:disabled {
   opacity: 0.65;
+  pointer-events: none;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: unset;
+  margin-top: 150px;
+}
+
+.btn-submit {
+  display: inline-block;
+  box-sizing: border-box;
+
+  margin-top: auto;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 3px;
+  height: 37px;
+
+  font-size: 14px;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  color: #07bc4c;
+  background-color: #fff;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.18s ease-out, background 0.18s ease-out,
+    color 0.18s ease-out;
+}
+.btn-submit:focus-visible {
+  box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn-submit:hover {
+  box-shadow: 0 1px 1px 0 #cfcfcf, 0 2px 5px 0 #cfcfcf;
+}
+.btn-submit:active {
+  background-color: #efefef !important;
+}
+.btn-submit:disabled {
+  background-color: #eee;
+  color: #444;
   pointer-events: none;
 }
