@@ -168,7 +168,7 @@ a:focus {
 
 .form {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: unset;
   margin-top: 150px;
 }
