@@ -47,4 +47,7 @@ function handleSubmit(event) {
 
     currentDelay += delayStep;
   }
+  delayInput.value = '';
+  stepInput.value = '';
+  amountInput.value = '';
 }

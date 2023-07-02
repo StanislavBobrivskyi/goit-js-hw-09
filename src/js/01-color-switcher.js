@@ -15,13 +15,19 @@ function changeBackgroundColor() {
 
 function handleStartClick() {
   startBtn.disabled = true;
-  startBtn.style.backgroundColor = 'gray';
+  startBtn.classList.add('disabled');
+  stopBtn.disabled = false;
+  stopBtn.classList.remove('disabled');
+  stopBtn.classList.add('active');
   intervalId = setInterval(changeBackgroundColor, 1000);
 }
 
 function handleStopClick() {
   startBtn.disabled = false;
-  startBtn.style.backgroundColor = '';
+  startBtn.classList.remove('disabled');
+  stopBtn.disabled = true;
+  stopBtn.classList.remove('active');
+  stopBtn.classList.add('disabled');
   clearInterval(intervalId);
 }
 
