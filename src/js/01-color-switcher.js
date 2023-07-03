@@ -19,6 +19,7 @@ function handleStartClick() {
   stopBtn.disabled = false;
   stopBtn.classList.remove('disabled');
   stopBtn.classList.add('active');
+
   intervalId = setInterval(changeBackgroundColor, 1000);
 }
 
